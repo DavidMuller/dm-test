@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  app:
+    image: python:3.9
+    command: /bin/bash -c "tail -f /dev/null"
+    entrypoint: ""
+
+  postgres:
+    image: postgres:10.12-alpine
+    ports:
+      - "5432:5432"
