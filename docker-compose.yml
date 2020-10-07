@@ -6,6 +6,8 @@ services:
     image: python:3.9
     command: /bin/bash -c "tail -f /dev/null"
     entrypoint: ""
+    depends_on:
+      - postgres    
 
   postgres:
     image: postgres:10.12-alpine
